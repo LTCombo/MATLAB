@@ -1,4 +1,6 @@
+
 function fig = dBplot(type, f, X, varargin)
+    %fig = dBplot(type, f, X, varargin)
     %Plots in dB
     %Requires type, f, X as inputs
     %X can be 'Y', 'Z', or 'G' (all base 20) - If incorrect, 'Y' is automatically
@@ -37,7 +39,7 @@ function fig = dBplot(type, f, X, varargin)
             
             case 'Magnitude'
             
-                fig = figure;
+                %fig = figure;
                 plot(fPlot, XPlot, 'LineWidth', 3)
                 xlabel(frequencyLabel)
                 ylabel(variableLabel)
@@ -46,7 +48,7 @@ function fig = dBplot(type, f, X, varargin)
 
             case 'Phase'
                 
-                fig = figure;
+                %fig = figure;
                 plot(fPlot, angle(X)*180/pi, 'LineWidth', 3)
                 xlabel(frequencyLabel)
                 ylabel('Phase, \theta [\circ]')
@@ -57,7 +59,7 @@ function fig = dBplot(type, f, X, varargin)
     
     else
         
-            fig = figure;
+            %fig = figure;
             subplot(2,1,1)
             plot(fPlot, 20*log10(abs(X)), 'LineWidth', 3)
             xlabel(frequencyLabel)

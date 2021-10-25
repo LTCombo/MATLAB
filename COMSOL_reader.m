@@ -1,7 +1,15 @@
-function [Y,freq]=COMSOL_reader()
+function [Y,freq]=COMSOL_reader(varargin)
+
+if isempty(varargin) == 1
 
 [filename1, pathname] = uigetfile('*.txt','Select the txt file for wide-span COMSOL simulation');
 filename = strcat(pathname, filename1);
+
+else
+
+filename = string(varargin);
+
+end
 
 fid = fopen(filename);                      %Open txt files
 

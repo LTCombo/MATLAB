@@ -1,4 +1,5 @@
 function [freq, S, Y] = extractSY(filename, varargin)
+    %[freq, S, Y] = extractSY(filename, varargin)
     %varargin represents the source Z. If not specified is automatically
     %set to 50 Ohm.
 
@@ -31,3 +32,4 @@ function [freq, S, Y] = extractSY(filename, varargin)
     
     
 end
+
